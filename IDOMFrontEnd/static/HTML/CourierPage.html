@@ -1,0 +1,134 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PAGINA DE CONTROL DE PRODUCTOS Y COMPONENTES PARA MENSAJEROS</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+
+<body background="../imagenes/fondo.jpg">
+    <h2 align="center">PAGINA DE CONTROL DE PRODUCTOS Y COMPONENTES PARA MENSAJEROS</h2>
+    <br>
+    <li><b>Visualizar lista de ubicaciones</b>
+        <div class="button">
+            <br>
+            <button type="submit" onclick="return add_li('listaUbicaciones')" value="añadir li">Cargar lista</button>
+        </div>
+        <ul id="listaUbicaciones" style="width: 100px;
+        margin-left: 20px;
+        background-color: #fff;
+        color: #000;">Listado:
+        </ul>
+    </li>
+
+    <br>
+    <li><b>Visualizar listado de productores y manufactores</b>
+        <div class="button">
+            <br>
+            <button type="submit" onclick="return add_li('listaProductManuf')" value="añadir li">Cargar lista</button>
+        </div>
+        <ul id="listaProductManuf" style="width: 100px;
+        margin-left: 20px;
+        background-color: #fff;
+        color: #000;">Listado:
+        </ul>
+    </li>
+
+    <br>
+    <li><b>Visualizar listado de componentes y productos a la espera de ser transportados o en proceso de serlo</b>
+        <div class="button">
+            <br>
+            <button type="submit" onclick="return add_li('listaComponentesProductos')" value="añadir li">Cargar lista</button>
+        </div>
+        <ul id="listaComponentesProductos" style="width: 100px;
+        margin-left: 20px;
+        background-color: #fff;
+        color: #000;">Listado:
+        </ul>
+    </li>
+    <br>
+    <li>Marcar paso de ruta de envio
+        <ul class="nav">
+            <div id="destinationID">
+                <br>
+                <li>
+                    <a href="#" onclick="cambiarVista('destination'); return false;">Destino:</a>
+                    <ul id="destination" style="display: none">
+                        <select name="elegir_destino" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML, 'destinationOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="destinationOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <ul class="nav">
+            <div id="itemID">
+                <br>
+                <li><a href="#" onclick="cambiarVista('item'); return false;">Item:</a>
+                    <ul id="item" style="display: none">
+                        <select name="elegir_mensajero" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML,'itemOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="itemOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <div class="button">
+            <br>
+            <button type="submit">Marcar paso de ruta</button>
+        </div>
+    </li>
+    <br>
+    <li>Finalizar envio
+        <ul class="nav">
+            <div id="destinationID">
+                <br>
+                <li>
+                    <a href="#" onclick="cambiarVista('endDestination'); return false;">Destino:</a>
+                    <ul id="endDestination" style="display: none">
+                        <select name="elegir_destino" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML, 'endDestinationOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="endDestinationOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <ul class="nav">
+            <div id="itemID">
+                <br>
+                <li><a href="#" onclick="cambiarVista('ID'); return false;">Item:</a>
+                    <ul id="ID" style="display: none">
+                        <select name="elegir_mensajero" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML,'endItemOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="endItemOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <div class="button">
+            <br>
+            <button type="submit">Finalizar envio</button>
+        </div>
+    </li>
+
+    <script src="../JavaScript/scripts.js"></script>
+</body>
+<!--No hay transaccion para finalizar envio-->

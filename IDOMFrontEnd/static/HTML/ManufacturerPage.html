@@ -1,0 +1,191 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PAGINA DE CONTROL DE PRODUCTOS PARA MANUFACTORES</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+
+<body background="../imagenes/fondo.jpg">
+    <h2 align="center">PAGINA DE CONTROL DE PRODUCTOS PARA MANUFACTORES</h2>
+    <li><b>Crear producto</b>
+        <div>
+            <br>
+            <ul class="nav">
+                <div id="itemID">
+                    <li>Componentes:
+
+                        <ul class="comboBox" id="component" style="display: block;">
+                            <li><input type="checkbox" id="cbox1" value="first_checkbox">Opcion1
+                            </li>
+                            <li><input type="checkbox" id="cbox2" value="second_checkbox">Opcion2
+                            </li>
+                            <li><input type="checkbox" id="cbox3" value="third_checkbox">Opcion3
+                            </li>
+                            <li><input type="checkbox" id="cbox4" value="fourth_checkbox">Opcion4
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div>
+            <br>
+            <label for="description">Descripción:</label>
+            <input type="text" id="description" />
+        </div>
+        <ul class="nav">
+            <div id="itemID">
+                <br>
+                <li>
+                    <a href="#" onclick="cambiarVista('location'); return false;">Localización:</a>
+                    <ul id="location" style="display: none">
+                        <select name="elegir_localizacion" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML, 'locationOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="locationOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <div class="button">
+            <br>
+            <button type="submit">Crear producto</button>
+        </div>
+    </li>
+
+    <br>
+    <li><b>Visualizar lista de componentes</b>
+        <div class="button">
+            <br>
+            <button type="submit" onclick="return add_li('listaComponentes')" value="añadir li">Cargar lista</button>
+        </div>
+        <ul id="listaComponentes" style="width: 100px;
+        margin-left: 20px;
+        background-color: #fff;
+        color: #000;">Listado:
+        </ul>
+    </li>
+
+    <br>
+    <li><b>Visualizar lista de productos</b>
+        <div class="button">
+            <br>
+            <button type="submit" onclick="return add_li('listaProductos')" value="añadir li">Cargar lista</button>
+        </div>
+        <ul id="listaProductos" style="width: 100px;
+        margin-left: 20px;
+        background-color: #fff;
+        color: #000;">Listado:
+        </ul>
+    </li>
+
+    <br>
+    <li><b>Visualizar lista de ubicaciones</b>
+        <div class="button">
+            <br>
+            <button type="submit" onclick="return add_li('listaUbicaciones')" value="añadir li">Cargar lista</button>
+        </div>
+        <ul id="listaUbicaciones" style="width: 100px;
+        margin-left: 20px;
+        background-color: #fff;
+        color: #000;">Listado:
+        </ul>
+    </li>
+
+    <br>
+    <li><b>Visualizar lista de clientes</b>
+        <div class="button">
+            <br>
+            <button type="submit" onclick="return add_li('listaClientes')" value="añadir li">Cargar lista</button>
+        </div>
+        <ul id="listaClientes" style="width: 100px;
+        margin-left: 20px;
+        background-color: #fff;
+        color: #000;">Listado
+        </ul>
+    </li>
+    <br>
+    <li><b>Hacer envio</b>
+        <ul class="nav">
+            <div id="itemID">
+                <br>
+                <li><a href="#" onclick="cambiarVista('productos'); return false;">ID del producto:</a>
+                    <ul id="productos" style="display: none">
+                        <select name="elegir_mensajero" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML,'productosOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="productosOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <ul class="nav">
+            <div id="courierID">
+                <br>
+                <li><a href="#" onclick="cambiarVista('courier'); return false;">Mensajero:</a>
+                    <ul id="courier" style="display: none">
+                        <select name="elegir_mensajero" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML,'courierOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="courierOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <ul class="nav">
+            <div id="ownerID">
+                <br>
+                <li><a href="#" onclick="cambiarVista('owner'); return false;">Propietario actual:</a>
+                    <ul id="owner" style="display: none">
+                        <select name="elegir_propietario" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML.valuethis.value, 'ownerOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="ownerOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <ul class="nav">
+            <div id="destinationID">
+                <br>
+                <li><a href="#" onclick="cambiarVista('destination'); return false;">Destino:</a>
+                    <ul id="destination" style="display: none">
+                        <select name="elegir_destino" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML, 'destOutput');">
+ 
+                                    <option value="1">Opcion1</option>
+                                    <option value="2">Opcion2</option>
+                                    <option value="3">Opcion3</option>
+                                
+                                </select>
+                    </ul>
+                </li>
+                <input type="text" id="destOutput" readonly="readonly" />
+            </div>
+        </ul>
+        <div class="button">
+            <br>
+            <button type="submit">Hacer envio</button>
+        </div>
+    </li>
+
+    <script src="../JavaScript/scripts.js"></script>
+</body>
+
+</html>
