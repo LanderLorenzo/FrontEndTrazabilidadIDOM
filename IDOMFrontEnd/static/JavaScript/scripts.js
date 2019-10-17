@@ -54,3 +54,29 @@ function eliminar(elemento) {
     node = document.getElementById(id);
     node.parentNode.removeChild(node);
 }
+
+function cargarLista() {
+
+}
+
+function filtroLista(tipo) {
+    if (tipo == "componentes") {
+        cargarLista();
+        axios.get("enlaceServidor")
+            .then(function(response) {
+                console.log(response.data)
+            })
+    } else if (tipo == "productos") {
+        cargarLista();
+        axios.get("enlaceServidor")
+            .then(function(response) {
+                console.log(response.data)
+            })
+    } else {
+        cargarLista();
+        axios.get("enlaceServidor")
+            .then(function(response) {
+                console.log(response.data)
+            })
+    }
+}

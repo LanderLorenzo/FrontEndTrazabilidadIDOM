@@ -1,11 +1,28 @@
+<html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>PAGINA DE CONTROL DE PRODUCTOS Y COMPONENTES PARA MENSAJEROS</title>
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body background="../imagenes/fondo.jpg">
     <h2 align="center">PAGINA DE CONTROL DE PRODUCTOS Y COMPONENTES PARA MENSAJEROS</h2>
+    <br>
+    <b style="width: 100px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center">Leer código QR</b>
+    <div class="button">
+        <br>
+        <button type="submit" onclick="" style="width: 100px;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;">Leer</button>
+    </div>
+
     <br>
     <li><b>Visualizar lista de ubicaciones</b>
         <div class="button">
@@ -54,6 +71,7 @@
                     <ul id="destination" style="display: none">
                         <select name="elegir_destino" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML, 'destinationOutput');">
  
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
@@ -71,6 +89,7 @@
                     <ul id="item" style="display: none">
                         <select name="elegir_mensajero" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML,'itemOutput');">
  
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
@@ -96,6 +115,7 @@
                     <ul id="endDestination" style="display: none">
                         <select name="elegir_destino" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML, 'endDestinationOutput');">
  
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
@@ -113,6 +133,7 @@
                     <ul id="ID" style="display: none">
                         <select name="elegir_mensajero" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML,'endItemOutput');">
  
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
@@ -131,4 +152,6 @@
 
     <script src="../JavaScript/scripts.js"></script>
 </body>
+
+</html>
 <!--No hay transaccion para finalizar envio-->

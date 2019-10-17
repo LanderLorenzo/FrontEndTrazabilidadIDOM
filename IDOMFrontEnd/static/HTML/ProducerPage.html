@@ -4,10 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>PAGINA DE CONTROL DE MERCANCIAS PARA PRODUCTORES</title>
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body background="../imagenes/fondo.jpg">
     <h2 align="center">PAGINA DE CONTROL DE MERCANCIAS PARA PRODUCTORES</h2>
+    <br>
+    <b style="width: 100px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center">Leer código QR</b>
+    <div class="button">
+        <br>
+        <button type="submit" onclick="location.href='./VistaQR.html'" style="width: 100px;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;">Leer</button>
+    </div>
     <li><b>Crear componente</b>
         <div>
             <br>
@@ -22,6 +36,7 @@
                     <ul id="location" style="display: none">
                         <select name="elegir_localizacion" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML, 'locationOutput');">
  
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
@@ -47,7 +62,7 @@
         <ul id="listaComponentes" style="width: 100px;
         margin-left: 20px;
         background-color: #fff;
-        color: #000;">Listado:
+        color: #000;">
         </ul>
     </li>
 
@@ -60,7 +75,7 @@
         <ul id="listaUbicaciones" style="width: 100px;
         margin-left: 20px;
         background-color: #fff;
-        color: #000;">Listado:
+        color: #000;">
         </ul>
     </li>
 
@@ -72,7 +87,8 @@
                 <li><a href="#" onclick="cambiarVista('componentes'); return false;">ID del componente:</a>
                     <ul id="componentes" style="display: none">
                         <select name="elegir_mensajero" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML,'componentesOutput');">
- 
+
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
@@ -90,6 +106,7 @@
                     <ul id="courier" style="display: none">
                         <select name="elegir_mensajero" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML,'courierOutput');">
  
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
@@ -107,6 +124,7 @@
                     <ul id="owner" style="display: none">
                         <select name="elegir_propietario" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML.valuethis.value, 'ownerOutput');">
  
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
@@ -125,6 +143,7 @@
                     <ul id="destination" style="display: none">
                         <select name="elegir_destino" onchange="mostrarValor(this.options[this.selectedIndex].innerHTML, 'destinationOutput');">
  
+                                    <option value="0"></option>
                                     <option value="1">Opcion1</option>
                                     <option value="2">Opcion2</option>
                                     <option value="3">Opcion3</option>
